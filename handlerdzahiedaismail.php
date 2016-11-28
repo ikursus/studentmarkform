@@ -1,7 +1,6 @@
 <?php
 
 // Semak adakah form yang dikirimkan menggunakan request method POST
-// dan field diisi
 if ( ! isset( $_SERVER['REQUEST_METHOD'] ) == 'POST' )
 {
     // Redirect ke form jika tidak wujud request method POST
