@@ -1,7 +1,7 @@
 <?php
 
 // Semak adakah form yang dikirimkan menggunakan request method POST
-if ( ! isset( $_SERVER['REQUEST_METHOD'] ) == 'POST' )
+if ( $_SERVER['REQUEST_METHOD'] != 'POST' )
 {
     // Redirect ke form jika tidak wujud request method POST
     header('Location: ./dzahiedaismail.html');
