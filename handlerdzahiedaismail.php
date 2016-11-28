@@ -5,6 +5,7 @@ if ( ! isset( $_SERVER['REQUEST_METHOD'] ) == 'POST' )
 {
     // Redirect ke form jika tidak wujud request method POST
     header('Location: ./dzahiedaismail.html');
+    exit();
 }
 
 // Lakukan validasi ke atas data yang dihantar pada borang jika perlu.
