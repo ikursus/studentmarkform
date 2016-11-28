@@ -29,7 +29,7 @@ if ( ! is_null( $error ) )
     exit();
 }
 
-// Selepas validasi dan tetapkan variable dibuat, connect ke DB yang berkaitan
+// Selepas validasi borang dibuat, connect ke DB yang berkaitan
 include ('dbdzahiedaismail.php');
 
 // Tetapkan $variable agar mudah digunakan pada query untuk
