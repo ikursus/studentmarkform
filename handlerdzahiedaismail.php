@@ -30,19 +30,19 @@ if ( ! is_null( $error ) )
     exit();
 }
 
-// Tetapkan variable agar mudah digunakan pada query
-// Semua data diperolehi dari METHOD POST Form yang ditetapkan
-$name = $_POST['name'];
-$student_id = $_POST['student_id'];
-$email = $_POST['email'];
-$gender = $_POST['gender'];
-$programme = $_POST['programme'];
-$coursework = $_POST['coursework'];
-$final = $_POST['final'];
-
-// Selepas validasi dan tetapkan variable dibuat, connect ke DB
-// yang berkaitan
+// Selepas validasi dan tetapkan variable dibuat, connect ke DB yang berkaitan
 include ('dbdzahiedaismail.php');
+
+// Tetapkan $variable agar mudah digunakan pada query untuk
+// semua data diperolehi dari METHOD POST Form
+// Lakukan escape string untuk mengelakkan error pada DB jika ada special characters
+$name = mysqli_real_escape_string( $db_connection, $_POST['name'] );
+$student_id = mysqli_real_escape_string( $db_connection, $_POST['student_id'] );
+$email = mysqli_real_escape_string( $db_connection, $_POST['email'] );
+$gender = mysqli_real_escape_string( $db_connection, $_POST['gender'] );
+$programme = mysqli_real_escape_string( $db_connection, $_POST['programme'] );
+$coursework = mysqli_real_escape_string( $db_connection, $_POST['coursework'] );
+$final = mysqli_real_escape_string( $db_connection, $_POST['final'] );
 
 // Tetapkan query INSERT data ke table tbldzahiedaismail
 $sql = "INSERT INTO tbldzahiedaismail (name, student_id, email, gender, programme, coursework, final) 
