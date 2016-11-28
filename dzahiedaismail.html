@@ -1,0 +1,61 @@
+<html>
+    <head>
+    <title>Simple HTML Form Grade</title>
+    </head>
+    <body>
+        <center><p><h1>ISB42503 Internet Programming</h1></p>
+        <p><h2>Assignment</h2></p>
+        <p><h3>Student Marks Form</h3></p>
+        </center>
+            <form action="handlerdzahiedaismail.php" method="POST">
+            <!-- Sebaiknya gunakan POST method untuk submission Form -->
+                
+        <fieldset>
+        <legend>Enter your information in the form below:</legend>
+        
+        <p><b>Name:</b>
+        <input type="text" name="name" size="20" maxlength="40"/>
+        </p>
+        
+        <p><b>Student ID:</b>
+        <input type="text" name="student_id" size="20" maxlength="40"/>
+        <!--  Gunakan saja nama column "student_id" dari DB untuk field ini-->
+        </p>
+        
+        <p><b>Email:</b>
+        <input type="text" name="email" size="40" maxlength="60"/>
+        </p>
+        
+        <p><b>Gender:</b>
+        <input type="radio" name="gender" value="M" /> Male
+        <input type="radio" name="gender" value="F" /> Female
+        </p>
+        
+        <p><b>Programme:</b>
+        <select name="programme">
+        <option value="1">BSE</option>
+        <option value="2">BCAM</option>
+        <option value="3">BCSS</option>
+        <option value="4">BCE</option>
+        <option value="5">BNS</option>
+        <option value="6">BIMD</option>
+        </select>
+        </p>
+        
+        <p><b>Coursework:</b>
+        <input type="text" name="coursework" size="5"/>
+        </p>
+        
+        <p><b>Final:</b>
+        <input type="text" name="final" size="5"/>
+        </p>
+        </fieldset>
+        
+        <div align="center">
+
+            <button type="submit">Submit information</button>
+        
+        </div>
+    </form>
+    </body>
+    </html>
